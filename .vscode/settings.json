@@ -18,4 +18,10 @@
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
     },
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#6667AB", // タイトルバーの背景色
+        "titleBar.activeForeground": "#ffffff", // タイトルバーの文字色
+        "statusBar.background": "#6667AB", // ステータスバーの背景色
+        "statusBar.foreground": "#ffffff", // ステータスバーの文字色
+    }
 }

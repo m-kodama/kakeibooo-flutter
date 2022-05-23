@@ -1,0 +1,60 @@
+{
+	"ConsumerWidget": {
+		"prefix": "cnsm",
+		"body": [
+			"class $1 extends ConsumerWidget {",
+			"  const $1({Key? key}) : super(key: key);",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context, WidgetRef ref) {",
+			"    $0",
+			"  }",
+			"}",
+		],
+		"description": "RiverpodのConsumerWidget用スニペット"
+	},
+	"Freezed": {
+		"prefix": "freezed",
+		"body": [
+			"import 'package:freezed_annotation/freezed_annotation.dart';",
+			"import 'package:flutter/foundation.dart';",
+			"",
+			"part '$TM_FILENAME_BASE.freezed.dart';",
+			"part '$TM_FILENAME_BASE.g.dart';",
+			"",
+			"@freezed",
+			"class $1 with _\\$$1 {",
+			"  const $1._();",
+			"",
+			"  const factory $1({",
+			"    $2",
+			"  }) = _$1;",
+			"",
+			"  factory $1.fromJson(Map<String, Object?> json) => _\\$$1FromJson(json);",
+			"}"
+		],
+		"description": "Freezedクラス"
+	},
+	"StateNotifier": {
+		"prefix": "statenotifier",
+		"body": [
+			"import 'package:flutter_riverpod/flutter_riverpod.dart';",
+			"",
+			"final ${2:${1/(.*)/${1:/camelcase}/}}NotifierProvider =",
+			"  StateNotifierProvider.autoDispose<$1Notifier, $1State>((ref) {",
+			"    return $1Notifier(ref.read);",
+			"  });",
+			"",
+			"class $1Notifier extends StateNotifier<$1State> {",
+			"  $1Notifier(",
+			"    this._read,",
+			"  ) : super(const $1State());",
+			"",
+			"  final Reader _read;",
+			"",
+			"  $3",
+			"}",
+		],
+		"description": "StateNotifierクラス"
+	},
+}
