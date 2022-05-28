@@ -23,5 +23,11 @@
         "titleBar.activeForeground": "#ffffff", // タイトルバーの文字色
         "statusBar.background": "#6667AB", // ステータスバーの背景色
         "statusBar.foreground": "#ffffff", // ステータスバーの文字色
-    }
+    },
+    "cSpell.words": [
+        "Cupertino",
+        "Kakeibooo",
+        "riverpod",
+        "supabase"
+    ]
 }
