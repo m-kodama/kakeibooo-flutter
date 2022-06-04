@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:kakeibooo_flutter/core/app_theme.dart';
 import 'package:kakeibooo_flutter/feature/home/ui/home_page.dart';
 
 void main() {
@@ -24,10 +25,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kakeibooo',
-      theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.orange,
-      ),
+      theme: AppTheme.light,
+      darkTheme: AppTheme.dark,
       home: const HomePage(),
     );
   }
