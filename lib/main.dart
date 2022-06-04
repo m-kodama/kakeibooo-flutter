@@ -2,8 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:kakeibooo_flutter/core/app_theme.dart';
-import 'package:kakeibooo_flutter/feature/home/ui/home_page.dart';
+import 'package:kakeibooo_flutter/app.dart';
 
 void main() {
   LicenseRegistry.addLicense(() async* {
@@ -13,21 +12,7 @@ void main() {
 
   runApp(
     const ProviderScope(
-      child: MyApp(),
+      child: App(),
     ),
   );
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Kakeibooo',
-      theme: AppTheme.light,
-      darkTheme: AppTheme.dark,
-      home: const HomePage(),
-    );
-  }
 }
