@@ -1,4 +1,11 @@
 {
+	"Theme.of": {
+		"prefix": "thof",
+		"body": [
+			"Theme.of(context)$0",
+		],
+		"description": "Theme.of(context)"
+	},
 	"ConsumerWidget": {
 		"prefix": "cnsm",
 		"body": [
@@ -12,6 +19,20 @@
 			"}",
 		],
 		"description": "RiverpodのConsumerWidget用スニペット"
+	},
+	"HookConsumerWidget": {
+		"prefix": "hcnsm",
+		"body": [
+			"class $1 extends HookConsumerWidget {",
+			"  const $1({Key? key}) : super(key: key);",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context, WidgetRef ref) {",
+			"    $0",
+			"  }",
+			"}",
+		],
+		"description": "RiverpodのHookConsumerWidget用スニペット"
 	},
 	"Freezed": {
 		"prefix": "freezed",
