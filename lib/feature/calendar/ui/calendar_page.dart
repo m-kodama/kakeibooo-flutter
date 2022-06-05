@@ -149,7 +149,7 @@ class _ReceiptCard extends StatelessWidget {
           Container(
             width: 16,
             height: 64,
-            color: AppColors.primaryColor,
+            color: AppColors.primary,
             child: Center(
               child: Container(
                 width: 8,
@@ -219,10 +219,10 @@ class _CalendarTitleRow extends StatelessWidget {
       children: [
         Text(
           'May 2022',
-          style: GoogleFonts.mPlusRounded1c(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
+          style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
         ),
         const Spacer(),
         IconButton(

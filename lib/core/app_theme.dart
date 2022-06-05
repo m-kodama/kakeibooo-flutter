@@ -7,13 +7,16 @@ class AppTheme {
 
   static ThemeData _getBase(Brightness brightness) => ThemeData(
         brightness: brightness,
-        colorSchemeSeed: AppColors.primaryColor,
+        colorSchemeSeed: AppColors.primary,
         useMaterial3: true,
         textTheme: GoogleFonts.mPlusRounded1cTextTheme(
           brightness == Brightness.light
               ? ThemeData.light().textTheme
               : ThemeData.dark().textTheme,
-        ).copyWith(),
+        ).copyWith().apply(
+              displayColor: AppColors.font,
+              bodyColor: AppColors.font,
+            ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );
 
