@@ -14,8 +14,8 @@ class AppTheme {
               ? ThemeData.light().textTheme
               : ThemeData.dark().textTheme,
         ).copyWith().apply(
-              displayColor: AppColors.font,
-              bodyColor: AppColors.font,
+              displayColor: AppColors.black,
+              bodyColor: AppColors.black,
             ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       );
