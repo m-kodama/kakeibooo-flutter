@@ -96,7 +96,7 @@ class BottomBarButton extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 decoration: BoxDecoration(
                   color: isSelected
-                      ? AppColors.primaryColor.withOpacity(0.2)
+                      ? AppColors.primary.withOpacity(0.2)
                       : Colors.transparent,
                   borderRadius: BorderRadius.circular(24),
                 ),

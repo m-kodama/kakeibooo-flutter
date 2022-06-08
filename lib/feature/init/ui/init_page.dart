@@ -48,7 +48,7 @@ class _InitPageState extends State<InitPage>
           child: Icon(
             Icons.savings_outlined,
             size: 128,
-            color: AppColors.primaryColor,
+            color: AppColors.primary,
           ),
         ),
       ),
