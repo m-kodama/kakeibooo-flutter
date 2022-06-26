@@ -7,6 +7,8 @@ import 'package:kakeibooo_flutter/feature/calendar/ui/calendar_page.dart';
 class HomePage extends ConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  static const routeName = '/home';
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(

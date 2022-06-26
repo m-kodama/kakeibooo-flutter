@@ -5,6 +5,8 @@ import 'package:kakeibooo_flutter/feature/home/ui/home_page.dart';
 class InitPage extends StatefulWidget {
   const InitPage({Key? key}) : super(key: key);
 
+  static const routeName = '/init';
+
   @override
   State<InitPage> createState() => _InitPageState();
 }
@@ -30,11 +32,7 @@ class _InitPageState extends State<InitPage>
     );
 
     Future.delayed(const Duration(milliseconds: 2400), () {
-      Navigator.of(context).push(
-        MaterialPageRoute(
-          builder: (context) => const HomePage(),
-        ),
-      );
+      Navigator.of(context).pushNamed(HomePage.routeName);
     });
   }
 
@@ -45,9 +43,9 @@ class _InitPageState extends State<InitPage>
       child: Center(
         child: RotationTransition(
           turns: rotateAnimation!,
-          child: Icon(
+          child: const Icon(
             Icons.savings_outlined,
-            size: 128,
+            size: 96,
             color: AppColors.primary,
           ),
         ),
