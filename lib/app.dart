@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:kakeibooo_flutter/core/app_theme.dart';
-import 'package:kakeibooo_flutter/core/provider/app_navigator.dart';
-import 'package:kakeibooo_flutter/core/provider/main_router.dart';
+import 'package:kakeibooo_flutter/core/navigation/app_navigator.dart';
+import 'package:kakeibooo_flutter/core/navigation/main_router.dart';
 
 class App extends ConsumerWidget {
   const App({super.key});
