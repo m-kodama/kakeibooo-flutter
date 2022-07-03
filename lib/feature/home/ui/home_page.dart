@@ -7,6 +7,8 @@ import 'package:kakeibooo_flutter/feature/calendar/ui/calendar_page.dart';
 class HomePage extends ConsumerWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  static const routeName = '/home';
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
@@ -96,7 +98,7 @@ class BottomBarButton extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 4),
                 decoration: BoxDecoration(
                   color: isSelected
-                      ? AppColors.primaryColor.withOpacity(0.2)
+                      ? AppColors.primary.withOpacity(0.2)
                       : Colors.transparent,
                   borderRadius: BorderRadius.circular(24),
                 ),

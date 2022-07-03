@@ -1,22 +1,26 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:kakeibooo_flutter/feature/home/ui/home_page.dart';
+import 'package:flutter/services.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:kakeibooo_flutter/app.dart';
+import 'package:kakeibooo_flutter/core/helper/shared_preferences_helper.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('assets/google_fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Kakeibooo',
-      theme: ThemeData(
-        useMaterial3: true,
-        primarySwatch: Colors.orange,
-      ),
-      home: const HomePage(),
-    );
-  }
+  runApp(
+    ProviderScope(
+      overrides: [
+        sharedPreferencesProvider.overrideWithValue(
+          await SharedPreferencesHelper.init(),
+        )
+      ],
+      child: const App(),
+    ),
+  );
 }
